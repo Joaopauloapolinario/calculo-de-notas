@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Main {
+    private static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int oPÇÃO;
+        
+        oPÇÃO = 1;
+        boolean cONTINUAR;
+        
+        cONTINUAR = true;
+        while (cONTINUAR) {
+            double nOTA1;
+            double nOTA2;
+            double nOTA3;
+            double nOTA4;
+            
+            System.out.println("DIGITE NOTA1");
+            nOTA1 = input.nextDouble();
+            System.out.println("DIGITE NOTA2");
+            nOTA2 = input.nextDouble();
+            System.out.println("DIGITE NOTA3");
+            nOTA3 = input.nextDouble();
+            System.out.println("DIGITE NOTA4");
+            nOTA4 = input.nextDouble();
+            double mEDIA;
+            
+            mEDIA = (nOTA1 + nOTA2 + nOTA3 + nOTA4) / 4;
+            System.out.println("A MEDIA É" + mEDIA);
+            if (mEDIA >= 6) {
+                System.out.println("ALUNO APROVADO");
+            } else {
+                System.out.println("ALUNO REPROVADO");
+            }
+            System.out.println("PARA CALCULAR OUTRA NOTA DIGITE 1");
+            oPÇÃO = input.nextInt();
+            if (oPÇÃO == 1) {
+                cONTINUAR = true;
+            } else {
+                cONTINUAR = false;
+            }
+        }
+    }
+}
